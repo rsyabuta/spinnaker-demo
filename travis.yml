@@ -1,0 +1,13 @@
+sudo: required
+
+language: go
+
+services:
+  - docker
+
+before_install:
+  - echo "$DOCKER_PASSWORD" | docker login -u "$DOCKER_USERNAME" --password-stdin quid-dock.jfrog.io
+  - docker-compose build
+
+script:
+  - go test -v -short -coverprofile
