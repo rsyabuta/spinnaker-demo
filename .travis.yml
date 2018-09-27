@@ -10,4 +10,4 @@ before_install:
   - docker-compose build
 
 script:
-  - go test -v -short -coverprofile
+  - go test -v -short
