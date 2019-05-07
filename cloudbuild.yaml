@@ -1,0 +1,5 @@
+steps:
+  - name: "docker/compose:1.24.0"
+    args: ["build"]
+  - name: "docker/compose:1.24.0"
+    args: ["run", "test"]

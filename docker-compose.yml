@@ -1,5 +1,13 @@
-version: "3"
+version: "3.7"
 services:
   web:
-    build: .
+    build:
+      context: .
+      target: release
     image: quid-dock.jfrog.io/quid/spinnaker-demo/web
+
+  test:
+    build:
+      context: .
+      target: builder
+    command: go test -v
